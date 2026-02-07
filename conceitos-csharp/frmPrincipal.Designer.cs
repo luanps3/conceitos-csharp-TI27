@@ -44,10 +44,20 @@
             txtIRRF = new TextBox();
             txtINSS = new TextBox();
             txtSalarioBruto = new TextBox();
-            label3 = new Label();
+            lblSalarioLiquido = new Label();
             label2 = new Label();
+            groupBox3 = new GroupBox();
+            cboInsalubridade = new ComboBox();
+            btnAdicionais = new Button();
+            txtAddNoturno = new TextBox();
+            txtPLR = new TextBox();
+            txtPericulosidade = new TextBox();
+            txtExtra = new TextBox();
+            lblAdicionais = new Label();
+            label4 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -147,7 +157,7 @@
             groupBox2.Controls.Add(txtIRRF);
             groupBox2.Controls.Add(txtINSS);
             groupBox2.Controls.Add(txtSalarioBruto);
-            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(lblSalarioLiquido);
             groupBox2.Controls.Add(label2);
             groupBox2.Font = new Font("Century Gothic", 9F);
             groupBox2.Location = new Point(225, 22);
@@ -168,6 +178,7 @@
             btnCalcular.TabIndex = 11;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = false;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // txtVR
             // 
@@ -209,15 +220,15 @@
             txtSalarioBruto.Size = new Size(136, 22);
             txtSalarioBruto.TabIndex = 9;
             // 
-            // label3
+            // lblSalarioLiquido
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(31, 216);
-            label3.Name = "label3";
-            label3.Size = new Size(32, 23);
-            label3.TabIndex = 4;
-            label3.Text = "R$";
+            lblSalarioLiquido.AutoSize = true;
+            lblSalarioLiquido.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSalarioLiquido.Location = new Point(31, 216);
+            lblSalarioLiquido.Name = "lblSalarioLiquido";
+            lblSalarioLiquido.Size = new Size(32, 23);
+            lblSalarioLiquido.TabIndex = 4;
+            lblSalarioLiquido.Text = "R$";
             // 
             // label2
             // 
@@ -229,11 +240,104 @@
             label2.TabIndex = 4;
             label2.Text = "Cálculo de Salário";
             // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(cboInsalubridade);
+            groupBox3.Controls.Add(btnAdicionais);
+            groupBox3.Controls.Add(txtAddNoturno);
+            groupBox3.Controls.Add(txtPLR);
+            groupBox3.Controls.Add(txtPericulosidade);
+            groupBox3.Controls.Add(txtExtra);
+            groupBox3.Controls.Add(lblAdicionais);
+            groupBox3.Controls.Add(label4);
+            groupBox3.Font = new Font("Century Gothic", 9F);
+            groupBox3.Location = new Point(438, 22);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(207, 313);
+            groupBox3.TabIndex = 4;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Extra";
+            // 
+            // cboInsalubridade
+            // 
+            cboInsalubridade.FormattingEnabled = true;
+            cboInsalubridade.Items.AddRange(new object[] { "Minimo", "Médio", "Máximo" });
+            cboInsalubridade.Location = new Point(31, 90);
+            cboInsalubridade.Name = "cboInsalubridade";
+            cboInsalubridade.Size = new Size(136, 25);
+            cboInsalubridade.TabIndex = 12;
+            // 
+            // btnAdicionais
+            // 
+            btnAdicionais.BackColor = Color.DarkGreen;
+            btnAdicionais.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdicionais.ForeColor = Color.White;
+            btnAdicionais.Location = new Point(31, 258);
+            btnAdicionais.Name = "btnAdicionais";
+            btnAdicionais.Size = new Size(136, 42);
+            btnAdicionais.TabIndex = 11;
+            btnAdicionais.Text = "Calcular";
+            btnAdicionais.UseVisualStyleBackColor = false;
+            btnAdicionais.Click += btnAdicionais_Click;
+            // 
+            // txtAddNoturno
+            // 
+            txtAddNoturno.Location = new Point(31, 177);
+            txtAddNoturno.Name = "txtAddNoturno";
+            txtAddNoturno.PlaceholderText = "Adicional Nortuno";
+            txtAddNoturno.Size = new Size(136, 22);
+            txtAddNoturno.TabIndex = 5;
+            // 
+            // txtPLR
+            // 
+            txtPLR.Location = new Point(31, 148);
+            txtPLR.Name = "txtPLR";
+            txtPLR.PlaceholderText = "PLR";
+            txtPLR.Size = new Size(136, 22);
+            txtPLR.TabIndex = 6;
+            // 
+            // txtPericulosidade
+            // 
+            txtPericulosidade.Location = new Point(31, 119);
+            txtPericulosidade.Name = "txtPericulosidade";
+            txtPericulosidade.PlaceholderText = "Periculosidade";
+            txtPericulosidade.Size = new Size(136, 22);
+            txtPericulosidade.TabIndex = 7;
+            // 
+            // txtExtra
+            // 
+            txtExtra.Location = new Point(31, 61);
+            txtExtra.Name = "txtExtra";
+            txtExtra.PlaceholderText = "Horas Extra";
+            txtExtra.Size = new Size(136, 22);
+            txtExtra.TabIndex = 9;
+            // 
+            // lblAdicionais
+            // 
+            lblAdicionais.AutoSize = true;
+            lblAdicionais.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAdicionais.Location = new Point(31, 216);
+            lblAdicionais.Name = "lblAdicionais";
+            lblAdicionais.Size = new Size(32, 23);
+            lblAdicionais.TabIndex = 4;
+            lblAdicionais.Text = "R$";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(10, 31);
+            label4.Name = "label4";
+            label4.Size = new Size(108, 23);
+            label4.TabIndex = 4;
+            label4.Text = "Adicionais";
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "frmPrincipal";
@@ -242,6 +346,8 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -264,7 +370,16 @@
         private TextBox txtINSS;
         private TextBox txtSalarioBruto;
         private Label label2;
-        private Label label3;
+        private Label lblSalarioLiquido;
         private Button btnCalcular;
+        private GroupBox groupBox3;
+        private Button btnAdicionais;
+        private TextBox txtAddNoturno;
+        private TextBox txtPLR;
+        private TextBox txtPericulosidade;
+        private TextBox txtExtra;
+        private Label lblAdicionais;
+        private Label label4;
+        private ComboBox cboInsalubridade;
     }
 }
