@@ -71,7 +71,7 @@
             groupBox1.Controls.Add(txtNome);
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Century Gothic", 9F);
-            groupBox1.Location = new Point(12, 22);
+            groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(207, 313);
             groupBox1.TabIndex = 4;
@@ -160,7 +160,7 @@
             groupBox2.Controls.Add(lblSalarioLiquido);
             groupBox2.Controls.Add(label2);
             groupBox2.Font = new Font("Century Gothic", 9F);
-            groupBox2.Location = new Point(225, 22);
+            groupBox2.Location = new Point(225, 12);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(207, 313);
             groupBox2.TabIndex = 4;
@@ -251,7 +251,7 @@
             groupBox3.Controls.Add(lblAdicionais);
             groupBox3.Controls.Add(label4);
             groupBox3.Font = new Font("Century Gothic", 9F);
-            groupBox3.Location = new Point(438, 22);
+            groupBox3.Location = new Point(438, 12);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(207, 313);
             groupBox3.TabIndex = 4;
@@ -336,7 +336,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(659, 337);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
