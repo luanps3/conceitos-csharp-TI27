@@ -219,6 +219,7 @@
             txtSalarioBruto.PlaceholderText = "Salário Bruto";
             txtSalarioBruto.Size = new Size(136, 22);
             txtSalarioBruto.TabIndex = 9;
+            txtSalarioBruto.TextChanged += txtSalarioBruto_TextChanged;
             // 
             // lblSalarioLiquido
             // 
@@ -285,6 +286,7 @@
             txtAddNoturno.Location = new Point(31, 177);
             txtAddNoturno.Name = "txtAddNoturno";
             txtAddNoturno.PlaceholderText = "Adicional Nortuno";
+            txtAddNoturno.ReadOnly = true;
             txtAddNoturno.Size = new Size(136, 22);
             txtAddNoturno.TabIndex = 5;
             // 
@@ -293,6 +295,7 @@
             txtPLR.Location = new Point(31, 148);
             txtPLR.Name = "txtPLR";
             txtPLR.PlaceholderText = "PLR";
+            txtPLR.ReadOnly = true;
             txtPLR.Size = new Size(136, 22);
             txtPLR.TabIndex = 6;
             // 

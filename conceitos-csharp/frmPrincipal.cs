@@ -203,5 +203,11 @@ namespace conceitos_csharp
             lblAdicionais.Text = (valorTotalHorasExtras + PLR + adicionalNoturno).ToString();
 
         }
+
+        private void txtSalarioBruto_TextChanged(object sender, EventArgs e)
+        {
+            txtPLR.Text = (Convert.ToDecimal(txtSalarioBruto.Text) * 0.10m).ToString("F2", CultureInfo.CurrentCulture);
+            txtAddNoturno.Text = (Convert.ToDecimal(txtSalarioBruto.Text) * 0.20m).ToString("F2", CultureInfo.CurrentCulture);
+        }
     }
 }
