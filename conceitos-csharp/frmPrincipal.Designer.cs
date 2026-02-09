@@ -185,6 +185,7 @@
             txtVR.Location = new Point(31, 177);
             txtVR.Name = "txtVR";
             txtVR.PlaceholderText = "VR";
+            txtVR.ReadOnly = true;
             txtVR.Size = new Size(136, 22);
             txtVR.TabIndex = 5;
             // 
@@ -193,6 +194,7 @@
             txtVT.Location = new Point(31, 148);
             txtVT.Name = "txtVT";
             txtVT.PlaceholderText = "VT";
+            txtVT.ReadOnly = true;
             txtVT.Size = new Size(136, 22);
             txtVT.TabIndex = 6;
             // 
@@ -201,6 +203,7 @@
             txtIRRF.Location = new Point(31, 119);
             txtIRRF.Name = "txtIRRF";
             txtIRRF.PlaceholderText = "IRRF";
+            txtIRRF.ReadOnly = true;
             txtIRRF.Size = new Size(136, 22);
             txtIRRF.TabIndex = 7;
             // 
@@ -209,6 +212,7 @@
             txtINSS.Location = new Point(31, 90);
             txtINSS.Name = "txtINSS";
             txtINSS.PlaceholderText = "INSS";
+            txtINSS.ReadOnly = true;
             txtINSS.Size = new Size(136, 22);
             txtINSS.TabIndex = 8;
             // 
@@ -304,6 +308,7 @@
             txtPericulosidade.Location = new Point(31, 119);
             txtPericulosidade.Name = "txtPericulosidade";
             txtPericulosidade.PlaceholderText = "Periculosidade";
+            txtPericulosidade.ReadOnly = true;
             txtPericulosidade.Size = new Size(136, 22);
             txtPericulosidade.TabIndex = 7;
             // 
@@ -339,7 +344,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(659, 337);
+            ClientSize = new Size(660, 337);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

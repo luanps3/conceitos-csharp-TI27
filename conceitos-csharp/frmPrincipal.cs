@@ -191,6 +191,7 @@ namespace conceitos_csharp
             decimal adicionalNoturno = Convert.ToDecimal(txtAddNoturno.Text);
             decimal adicionalNoturnoValor = salario * 0.20m; // Exemplo: adicional noturno de 20% sobre o valor da hora
 
+            lblAdicionais.Text = $"R${(valorTotalHorasExtras + PLR + adicionalNoturno).ToString("F2", CultureInfo.CurrentCulture)}";
             MessageBox.Show(
                 $"Salario: {txtSalarioBruto.Text}\n " +
                 $"Valor total Horas extras: {valorTotalHorasExtras}\n" +
@@ -200,12 +201,12 @@ namespace conceitos_csharp
                 $"Adicional Noturno: {adicionalNoturnoValor}");
 
 
-            lblAdicionais.Text = (valorTotalHorasExtras + PLR + adicionalNoturno).ToString();
 
         }
 
         private void txtSalarioBruto_TextChanged(object sender, EventArgs e)
         {
+            txtPericulosidade.Text = (1621 * 0.30m).ToString("F2", CultureInfo.CurrentCulture);
             txtPLR.Text = (Convert.ToDecimal(txtSalarioBruto.Text) * 0.10m).ToString("F2", CultureInfo.CurrentCulture);
             txtAddNoturno.Text = (Convert.ToDecimal(txtSalarioBruto.Text) * 0.20m).ToString("F2", CultureInfo.CurrentCulture);
         }
